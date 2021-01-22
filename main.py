@@ -1,13 +1,13 @@
 import pandas as pd
 
 from model.naive_bayes_model import NaiveBayesModel
-
+from model.svm_model  import SVMModel
 
 class TextClassificationPredict(object):
     def __init__(self):
         self.test = None
 
-    def get_train_data(self):
+    def get_train_data(self, inputstring):
         # Tạo train data
         url = 'https://raw.githubusercontent.com/vapormusic/neu-mfe-chatbot/main/question-intent.csv'
         df1 = pd.read_csv(url)
@@ -17,11 +17,11 @@ class TextClassificationPredict(object):
 
         # Tạo test data
         test_data = []
-        test_data.append({"feature": "Olympia", "target": "Olympia"})
+        test_data.append({"feature": inputstring, "target": "Olympia"})
         df_test = pd.DataFrame(test_data)
 
         # init model naive bayes
-        model = NaiveBayesModel()
+        model = SVMModel()
 
         clf = model.clf.fit(df_train["feature"], df_train.target)
 
@@ -33,5 +33,9 @@ class TextClassificationPredict(object):
 
 
 if __name__ == '__main__':
-    tcp = TextClassificationPredict()
-    tcp.get_train_data()
+    x = 1
+    while x == 1:
+        print("Input please: \n")
+        string = str(input())
+        tcp = TextClassificationPredict()
+        tcp.get_train_data(string)
