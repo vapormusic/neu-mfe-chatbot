@@ -28,14 +28,25 @@ class TextClassificationPredict(object):
         predicted = clf.predict(df_test["feature"])
 
         # Print predicted result
+        print("SVM model result: ")
         print(predicted)
         print(clf.predict_proba(df_test["feature"]))
 
+        model = NaiveBayesModel()
+
+        clf = model.clf.fit(df_train["feature"], df_train.target)
+
+        predicted = clf.predict(df_test["feature"])
+
+        # Print predicted result
+        print("Naive Bayes Result: ")
+        print(predicted)
+        print(clf.predict_proba(df_test["feature"]))
 
 if __name__ == '__main__':
     x = 1
     while x == 1:
-        print("Input please: \n")
+        print("Câu hỏi của bạn : \n")
         string = str(input())
         tcp = TextClassificationPredict()
         tcp.get_train_data(string)
