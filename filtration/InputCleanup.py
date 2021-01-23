@@ -12,11 +12,6 @@ class InputCleanup:
     def word_cleanup(self, input_str):
         output = input_str.lower()
         output2 = ViUtils.add_accents(output)
-        output3 = self.stopwords_remove(output2)
-        return output3
+        return output2
 
-    def stopwords_remove(self,input_str):
-        stopword_lists = open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()
-        for stopword in stopword_lists:
-            input_str.replace(stopword, '')
-        return input_str
+

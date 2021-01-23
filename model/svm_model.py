@@ -11,9 +11,12 @@ class SVMModel(object):
 
     @staticmethod
     def _init_pipeline():
+
+
+
         pipe_line = Pipeline([
             ("transformer", FeatureTransformer()),
-            ("vect", CountVectorizer()),
+            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()))),
             ("tfidf", TfidfTransformer()),
             ("clf-svm", SGDClassifier(loss='log', penalty='l2', alpha=1e-3, n_iter_no_change=5, random_state=None))
         ])
