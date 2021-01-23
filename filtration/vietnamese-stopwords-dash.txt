@@ -9,7 +9,7 @@ dân_số
 hai
 hoa
 họ
-introduction
+intro
 khi
 khoa_học
 không
@@ -38,7 +38,6 @@ thuộc
 tháng
 thêm
 thể_loại
-thực_vật
 trong
 trên
 tên
@@ -53,6 +52,5 @@ xem
 đã
 đó
 được
-đầu_tiên
 đến
 để
