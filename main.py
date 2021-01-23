@@ -1,7 +1,9 @@
 import pandas as pd
-
+from pyvi import ViTokenizer, ViPosTagger
 from model.naive_bayes_model import NaiveBayesModel
 from model.svm_model  import SVMModel
+from filtration.InputCleanup import InputCleanup
+from underthesea import word_tokenize
 
 class TextClassificationPredict(object):
     def __init__(self):
@@ -48,5 +50,9 @@ if __name__ == '__main__':
     while x == 1:
         print("Câu hỏi của bạn : \n")
         string = str(input())
+        tokenized = ViTokenizer.ViTokenizer.tokenize(string)
+     #   print(word_tokenize(string))
+        cleaned_up_input = InputCleanup().word_cleanup(input_str=tokenized)
+        print(ViTokenizer.ViTokenizer.tokenize("Cleaned up: " + cleaned_up_input))
         tcp = TextClassificationPredict()
-        tcp.get_train_data(string)
+        tcp.get_train_data(cleaned_up_input)
