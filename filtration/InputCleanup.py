@@ -11,7 +11,12 @@ class InputCleanup:
 
     def word_cleanup(self, input_str):
         output = input_str.lower()
-        output2 = ViUtils.add_accents(output)
+        output2 = output
+        try:
+            output2 = ViUtils.add_accents(output)
+        except:
+            pass
+
         return output2
 
 

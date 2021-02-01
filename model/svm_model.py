@@ -18,7 +18,7 @@ class SVMModel(object):
             ("transformer", FeatureTransformer()),
             ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()))),
             ("tfidf", TfidfTransformer()),
-            ("clf-svm", SGDClassifier(loss='log', penalty='l2', alpha=1e-3, n_iter_no_change=5, random_state=None))
+            ("clf-svm", SGDClassifier(loss='hinge', penalty='l2', alpha=1e-3, n_iter_no_change=5, random_state=None))
         ])
 
         return pipe_line
