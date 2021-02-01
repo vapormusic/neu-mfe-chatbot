@@ -1,5 +1,7 @@
 import pandas as pd
 from pyvi import ViTokenizer, ViPosTagger
+
+from model.knn_model import KNNModel
 from model.naive_bayes_model import NaiveBayesModel
 from model.svm_model import SVMModel
 from model.logit_model import LogitModel
@@ -16,6 +18,7 @@ class TextClassification(object):
         self.gs_clf = None
         self.gs_clf_logit = None
         self.gs_clf_svm = None
+        self.clf_knn = None
         self.clf_nb = None
         self.clf_svm = None
         self.clf_logit = None
@@ -60,6 +63,13 @@ class TextClassification(object):
         elapsed_logit = (time.time() - start)
 
 
+        #KNN
+        start = time.time()
+        knn = KNNModel()
+        self.clf_knn = knn.clf.fit(self.X_train["feature"], self.y_train)
+        score_knn = self.clf_knn.score(self.X_test["feature"], self.y_test)
+        elapsed_knn = (time.time() - start)
+
         # Grid search NB and SVM
 
         parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
@@ -100,16 +110,19 @@ class TextClassification(object):
 
 
         print("finish time:")
-        print("NB: " + str(round(elapsed_nb, 2))+"s")
-        print("SVM: " + str(round(elapsed_svm, 2))+"s")
-        print("Logit: " + str(round(elapsed_logit, 2))+"s")
-        print("GS_NB: " + str(round(elapsed_gs_nb, 2))+"s")
-        print("GS_SVM: " + str(round(elapsed_gs_svm, 2))+"s")
-        print("GS_Logit: " + str(round(elapsed_gs_logit, 2))+"s")
+        print("NB: " + str(round(elapsed_nb, 4))+"s")
+        print("SVM: " + str(round(elapsed_svm, 4))+"s")
+        print("Logit: " + str(round(elapsed_logit, 4))+"s")
+        print("KNN: " + str(round(elapsed_knn, 4)) + "s")
+        print("GS_NB: " + str(round(elapsed_gs_nb, 4))+"s")
+        print("GS_SVM: " + str(round(elapsed_gs_svm, 4))+"s")
+        print("GS_Logit: " + str(round(elapsed_gs_logit, 4))+"s")
+
         print("accuracy: ")
         print("NB: " + str(score_nb))
         print("SVM: " + str(score_svm))
         print("Logit: " + str(score_logit))
+        print("KNN: " + str(score_knn))
         print("GS_NB: " + str(score_gs))
         print("GS_SVM: " + str(score_gs_svm))
         print("GS_Logit: " + str(score_gs_logit))
@@ -124,6 +137,7 @@ class TextClassification(object):
             predicted_nb = self.clf_nb.predict(df_test["feature"])
             predicted_svm = self.clf_svm.predict(df_test["feature"])
             predicted_logit = self.clf_logit.predict(df_test["feature"])
+            predicted_knn = self.clf_knn.predict(df_test["feature"])
             predicted_gs_svm = self.gs_clf_svm.predict(df_test["feature"])
             predicted_gs_nb = self.gs_clf.predict(df_test["feature"])
             predicted_gs_logit = self.gs_clf_logit.predict(df_test["feature"])
@@ -135,6 +149,8 @@ class TextClassification(object):
             print(predicted_svm)
             print("Logit model result: ")
             print(predicted_logit)
+            print("KNN model result: ")
+            print(predicted_knn)
             print("Grid Search Naive Bayes Result: ")
             print(predicted_gs_nb)
             print('Best Score: %s' % self.gs_clf.best_score_)
