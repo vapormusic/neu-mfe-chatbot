@@ -5,7 +5,7 @@ from sklearn.base import TransformerMixin, BaseEstimator
 class FeatureTransformer(BaseEstimator, TransformerMixin):
     def __init__(self):
         self.tokenizer = ViTokenizer.ViTokenizer()
-        self.pos_tagger = ViPosTagger.ViPosTagger()
+      ##  self.pos_tagger = ViPosTagger.ViPosTagger()
 
     def fit(self, *_):
         return self

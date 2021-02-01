@@ -18,31 +18,38 @@ class TextClassification(object):
         self.clf_nb = None
         self.clf_svm = None
         self.clf_logit = None
+        self.X_train = None
+        self.X_test = None
+        self.y_train = None
+        self.y_test = None
 
 
     def get_train_data(self):
         print("Initializating...")
-        # Tạo train data
+        # Get data
         #url = 'https://raw.githubusercontent.com/vapormusic/neu-mfe-chatbot/main/question-intent.csv'
         df1 = pd.read_csv('question-intent.csv')
         pd.DataFrame(df1)
+        df_orig = pd.DataFrame(df1)
 
-        df_train = pd.DataFrame(df1)
-        X_train, X_test, y_train, y_test = train_test_split(df1, df_train.target, test_size=0.2)
+        # Split data into train and test
+        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(df_orig, df_orig.target, test_size=0.2)
+        print(self.X_train.shape, self.y_train.shape)
+        print(self.X_test.shape, self.y_test.shape)
 
         # NB model
         model_nb = NaiveBayesModel()
-        self.clf_nb = model_nb.clf.fit(df_train["feature"], df_train.target)
-
+        self.clf_nb = model_nb.clf.fit(self.X_train["feature"],self.y_train)
+        self.clf_nb.score
         # SVM model
 
         model_svm = SVMModel()
-        self.clf_svm = model_svm.clf.fit(df_train["feature"], df_train.target)
+        self.clf_svm = model_svm.clf.fit(self.X_train["feature"], self.y_train)
 
         # Logit model
 
         model_logit = LogitModel()
-        self.clf_logit = model_logit.clf.fit(df_train["feature"], df_train.target)
+        self.clf_logit = model_logit.clf.fit(self.X_train["feature"], self.y_train)
 
 
         # Grid search NB and SVM
@@ -61,18 +68,34 @@ class TextClassification(object):
                           'tfidf__use_idf': (True, False)
                           }
 
-        cv = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
+        cv = RepeatedStratifiedKFold(n_splits=6, n_repeats=3, random_state=1)
 
         gs_clf = GridSearchCV(model_nb.clf, parameters, n_jobs=-1, cv=cv)
-        self.gs_clf = gs_clf.fit(df_train["feature"], df_train.target)
+        self.gs_clf = gs_clf.fit(self.X_train["feature"], self.y_train)
 
 
         gs_clf_svm = GridSearchCV(model_svm.clf, parameters_svm, n_jobs=-1, cv=cv)
-        self.gs_clf_svm = gs_clf_svm.fit(df_train["feature"], df_train.target)
+        self.gs_clf_svm = gs_clf_svm.fit(self.X_train["feature"], self.y_train)
 
         gs_clf_logit = GridSearchCV(model_logit.clf, parameters_logit, n_jobs=-1, cv=cv)
-        self.gs_clf_logit = gs_clf_logit.fit(df_train["feature"], df_train.target)
+        self.gs_clf_logit = gs_clf_logit.fit(self.X_train["feature"], self.y_train)
         print("Initialization complete.")
+
+        score_nb = self.clf_nb.score(self.X_test["feature"], self.y_test)
+        score_svm = self.clf_svm.score(self.X_test["feature"], self.y_test)
+        score_logit = self.clf_logit.score(self.X_test["feature"], self.y_test)
+        score_gs = self.gs_clf.score(self.X_test["feature"], self.y_test)
+        score_gs_svm = self.gs_clf_svm.score(self.X_test["feature"], self.y_test)
+        score_gs_logit = self.gs_clf_logit.score(self.X_test["feature"], self.y_test)
+
+        print("accuracy: ")
+        print("NB: " + str(score_nb))
+        print("SVM: " + str(score_svm))
+        print("Logit: " + str(score_logit))
+        print("GS_NB: " + str(score_gs))
+        print("GS_SVM: " + str(score_gs_svm))
+        print("GS_Logit: " + str(score_gs_logit))
+
 
 
 
@@ -106,6 +129,8 @@ class TextClassification(object):
             print(predicted_gs_logit)
             print('Best Score: %s' % self.gs_clf_logit.best_score_)
             print('Best Hyperparameters: %s' % self.gs_clf_logit.best_params_)
+
+
 
 if __name__ == '__main__':
     tcp = TextClassification()
