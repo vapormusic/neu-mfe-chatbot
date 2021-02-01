@@ -7,6 +7,7 @@ from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 from sklearn.model_selection import train_test_split
+import time
 
 
 class TextClassification(object):
@@ -38,16 +39,25 @@ class TextClassification(object):
         print(self.X_test.shape, self.y_test.shape)
         
         # NB model
+        start = time.time()
         model_nb = NaiveBayesModel()
         self.clf_nb = model_nb.clf.fit(self.X_train["feature"], self.y_train)
+        score_nb = self.clf_nb.score(self.X_test["feature"], self.y_test)
+        elapsed_nb = (time.time() - start)
 
         # SVM model
+        start = time.time()
         model_svm = SVMModel()
         self.clf_svm = model_svm.clf.fit(self.X_train["feature"], self.y_train)
+        score_svm = self.clf_svm.score(self.X_test["feature"], self.y_test)
+        elapsed_svm = (time.time() - start)
 
         # Logit model
+        start = time.time()
         model_logit = LogitModel()
         self.clf_logit = model_logit.clf.fit(self.X_train["feature"], self.y_train)
+        score_logit = self.clf_logit.score(self.X_test["feature"], self.y_test)
+        elapsed_logit = (time.time() - start)
 
 
         # Grid search NB and SVM
@@ -67,26 +77,35 @@ class TextClassification(object):
 
                       }
 
-        cv = RepeatedStratifiedKFold(n_splits=7, n_repeats=10, random_state=1)
+        cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=1)
 
+        start = time.time()
         gs_clf = GridSearchCV(model_nb.clf, parameters, n_jobs=-1, cv=cv)
         self.gs_clf = gs_clf.fit(self.X_train["feature"], self.y_train)
+        score_gs = self.gs_clf.score(self.X_test["feature"], self.y_test)
+        elapsed_gs_nb = (time.time() - start)
 
-
+        start = time.time()
         gs_clf_svm = GridSearchCV(model_svm.clf, parameters_svm, n_jobs=-1, cv=cv)
         self.gs_clf_svm = gs_clf_svm.fit(self.X_train["feature"], self.y_train)
+        score_gs_svm = self.gs_clf_svm.score(self.X_test["feature"], self.y_test)
+        elapsed_gs_svm = (time.time() - start)
 
+        start = time.time()
         gs_clf_logit = GridSearchCV(model_logit.clf, parameters_logit, n_jobs=-1, cv=cv)
         self.gs_clf_logit = gs_clf_logit.fit(self.X_train["feature"], self.y_train)
+        score_gs_logit = self.gs_clf_logit.score(self.X_test["feature"], self.y_test)
+        elapsed_gs_logit = (time.time() - start)
         print("Initialization complete.")
 
-        score_nb = self.clf_nb.score(self.X_test["feature"], self.y_test)
-        score_svm = self.clf_svm.score(self.X_test["feature"], self.y_test)
-        score_logit = self.clf_logit.score(self.X_test["feature"], self.y_test)
-        score_gs = self.gs_clf.score(self.X_test["feature"], self.y_test)
-        score_gs_svm = self.gs_clf_svm.score(self.X_test["feature"], self.y_test)
-        score_gs_logit = self.gs_clf_logit.score(self.X_test["feature"], self.y_test)
 
+        print("finish time:")
+        print("NB: " + str(round(elapsed_nb, 2))+"s")
+        print("SVM: " + str(round(elapsed_svm, 2))+"s")
+        print("Logit: " + str(round(elapsed_logit, 2))+"s")
+        print("GS_NB: " + str(round(elapsed_gs_nb, 2))+"s")
+        print("GS_SVM: " + str(round(elapsed_gs_svm, 2))+"s")
+        print("GS_Logit: " + str(round(elapsed_gs_logit, 2))+"s")
         print("accuracy: ")
         print("NB: " + str(score_nb))
         print("SVM: " + str(score_svm))
