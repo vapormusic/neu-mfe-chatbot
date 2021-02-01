@@ -1,7 +1,7 @@
 from pyvi import ViTokenizer, ViPosTagger
 from sklearn.base import TransformerMixin, BaseEstimator
 from pyvi import ViUtils
-from underthesea import sent_tokenize
+
 
 
 

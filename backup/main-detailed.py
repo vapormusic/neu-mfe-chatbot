@@ -26,7 +26,7 @@ class TextClassification(object):
         print("Initializating...")
         # Tạo train data
         #url = 'https://raw.githubusercontent.com/vapormusic/neu-mfe-chatbot/main/question-intent.csv'
-        df1 = pd.read_csv('question-intent.csv')
+        df1 = pd.read_csv('../data/question-intent.csv')
         pd.DataFrame(df1)
         df_train = pd.DataFrame(df1)
 
@@ -36,7 +36,7 @@ class TextClassification(object):
             tokenized_questions = ViTokenizer.ViTokenizer.tokenize(questions)
             df_train["feature"][i] = tokenized_questions
 
-        count_vect = CountVectorizer(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines())
+        count_vect = CountVectorizer(open('../filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines())
         X_train_counts = count_vect.fit_transform(df_train["feature"])
 
         tfidf_transformer = TfidfTransformer()
@@ -85,7 +85,7 @@ class TextClassification(object):
             test_data = []
             test_data.append({"feature": input_string, "target": expected_intent})
             df_test = pd.DataFrame(test_data)
-            count_vect = CountVectorizer(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines())
+            count_vect = CountVectorizer(open('../filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines())
             X_train_counts = count_vect.fit_transform(df_test["feature"])
             tfidf_transformer = TfidfTransformer()
             X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
