@@ -12,6 +12,8 @@ class randomforest(object):
     @staticmethod
     def _init_pipeline():
         pipe_line = Pipeline([
+            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()))),
+            ("tfidf", TfidfTransformer()),
             ("clf", RandomForestRegressor(n_estimators = 100, random_state = 42))
         ])
         return pipe_line

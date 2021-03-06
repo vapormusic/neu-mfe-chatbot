@@ -95,16 +95,14 @@ class TextClassification(object):
         elapsed_decision_tree = (time.time() - start)
 
         #Random Forest
+        random_forest = randomforest()
+
         start = time.time()
         le = preprocessing.LabelEncoder()
-        X_train_vec = le.fit_transform(self.X_train["feature"].astype(str))
         Y_train_vec = le.fit_transform(self.y_train)
-        X_test_vec = le.fit_transform(self.X_test["feature"].astype(str))
         Y_test_vec = le.fit_transform(self.y_test)
-
-        random_forest = randomforest()
-        self.clf_random_forest = random_forest.clf.fit(X_train_vec[:, None], Y_train_vec)
-        score_random_forest = self.clf_random_forest.score(X_test_vec[:, None] , Y_test_vec)
+        self.clf_random_forest = random_forest.clf.fit(self.X_train["feature"], Y_train_vec)
+        score_random_forest = self.clf_random_forest.score(self.X_test["feature"], Y_test_vec)
         elapsed_random_forest = (time.time() - start)
 
         # Grid search NB and SVM
