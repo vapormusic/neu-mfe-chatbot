@@ -16,7 +16,7 @@ class NaiveBayesModel(object):
             ("transformer", FeatureTransformer()),#sử dụng pyvi tiến hành word segmentation
             ("vect", CountVectorizer(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").read().splitlines())),#bag-of-words
             ("tfidf", TfidfTransformer()),#tf-idf
-            ("clf", MultinomialNB())#model naive bayes
+            ("clf", MultinomialNB())#models naive bayes
         ])
 
         return pipe_line

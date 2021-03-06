@@ -2,13 +2,13 @@ import pandas as pd
 from pyvi import ViTokenizer, ViPosTagger
 from sklearn.ensemble import RandomForestRegressor
 
-from model.decision_tree_model import decision_tree
-from model.knn_model import KNNModel
-from model.naive_bayes_model import NaiveBayesModel
-from model.nbsvm_model import NBSVMModel
-from model.random_forest import randomforest
-from model.svm_model import SVMModel
-from model.logit_model import LogitModel
+from models.decision_tree_model import decision_tree
+from models.knn_model import KNNModel
+from models.naive_bayes_model import NaiveBayesModel
+from models.nbsvm_model import NBSVMModel
+from models.random_forest import randomforest
+from models.svm_model import SVMModel
+from models.logit_model import LogitModel
 from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
@@ -51,21 +51,21 @@ class TextClassification(object):
         print(self.X_train.shape, self.y_train.shape)
         print(self.X_test.shape, self.y_test.shape)
         
-        # NB model
+        # NB models
         start = time.time()
         model_nb = NaiveBayesModel()
         self.clf_nb = model_nb.clf.fit(self.X_train["feature"], self.y_train)
         score_nb = self.clf_nb.score(self.X_test["feature"], self.y_test)
         elapsed_nb = (time.time() - start)
 
-        # SVM model
+        # SVM models
         start = time.time()
         model_svm = SVMModel()
         self.clf_svm = model_svm.clf.fit(self.X_train["feature"], self.y_train)
         score_svm = self.clf_svm.score(self.X_test["feature"], self.y_test)
         elapsed_svm = (time.time() - start)
 
-        # Logit model
+        # Logit models
         start = time.time()
         model_logit = LogitModel()
         self.clf_logit = model_logit.clf.fit(self.X_train["feature"], self.y_train)
@@ -95,9 +95,8 @@ class TextClassification(object):
         elapsed_decision_tree = (time.time() - start)
 
         #Random Forest
-        random_forest = randomforest()
-
         start = time.time()
+        random_forest = randomforest()
         le = preprocessing.LabelEncoder()
         Y_train_vec = le.fit_transform(self.y_train)
         Y_test_vec = le.fit_transform(self.y_test)
@@ -179,6 +178,8 @@ class TextClassification(object):
             predicted_logit = self.clf_logit.predict(df_test["feature"])
             predicted_knn = self.clf_knn.predict(df_test["feature"])
             predicted_nbsvm = self.clf_nbsvm.predict(df_test["feature"])
+            predicted_decision_tree = self.clf_decision_tree.predict(df_test["feature"])
+            predicted_random_forest = self.clf_random_forest.predict(df_test["feature"])
             predicted_gs_svm = self.gs_clf_svm.predict(df_test["feature"])
             predicted_gs_nb = self.gs_clf.predict(df_test["feature"])
             predicted_gs_logit = self.gs_clf_logit.predict(df_test["feature"])
@@ -186,14 +187,18 @@ class TextClassification(object):
 
             print("Naive Bayes Result: ")
             print(predicted_nb)
-            print("SVM model result: ")
+            print("SVM models result: ")
             print(predicted_svm)
-            print("NBSVM model result: ")
+            print("NBSVM models result: ")
             print(predicted_nbsvm)
-            print("Logit model result: ")
+            print("Logit models result: ")
             print(predicted_logit)
-            print("KNN model result: ")
+            print("KNN models result: ")
             print(predicted_knn)
+            print("Decision Tree Result: ")
+            print(predicted_decision_tree)
+            print("Random Forest Result: ")
+            print(predicted_random_forest)
             print("Grid Search Naive Bayes Result: ")
             print(predicted_gs_nb)
             print('Best Score: %s' % self.gs_clf.best_score_)

@@ -1,7 +1,7 @@
 import pandas as pd
 from pyvi import ViTokenizer, ViPosTagger
-from model.naive_bayes_model import NaiveBayesModel
-from model.svm_model import SVMModel
+from models.naive_bayes_model import NaiveBayesModel
+from models.svm_model import SVMModel
 from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
@@ -43,13 +43,13 @@ class TextClassification(object):
         X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
 
 
-        # NB model
+        # NB models
 
         self.clf_nb = MultinomialNB()
         self.clf_nb.fit(X_train_tfidf, df_train.target)
 
 
-        # SVM model
+        # SVM models
 
         self.clf_svm = SGDClassifier(loss='log', penalty='l2', alpha=1e-3, n_iter_no_change=5, random_state=None)
         self.clf_svm.fit(X_train_tfidf, df_train.target)
@@ -96,7 +96,7 @@ class TextClassification(object):
 
             print("Naive Bayes Result: ")
             print(predicted_nb)
-            print("SVM model result: ")
+            print("SVM models result: ")
             print(predicted_svm)
             print("Grid Search Naive Bayes Result: ")
             print(predicted_gs_nb)

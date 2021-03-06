@@ -1,8 +1,8 @@
 import pandas as pd
 from pyvi import ViTokenizer, ViPosTagger
-from model.naive_bayes_model import NaiveBayesModel
-from model.svm_model import SVMModel
-from model.logit_model import LogitModel
+from models.naive_bayes_model import NaiveBayesModel
+from models.svm_model import SVMModel
+from models.logit_model import LogitModel
 from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
@@ -32,21 +32,21 @@ class TextClassification(object):
         df_train = pd.DataFrame(df1)
         X_train, X_test, y_train, y_test = train_test_split(df1, df_train.target, test_size=0.2)
 
-        # NB model
+        # NB models
         model_nb = NaiveBayesModel()
         self.clf_nb = model_nb.clf.fit(df_train["feature"], df_train.target)
 
-        # SVM model
+        # SVM models
 
         model_svm = SVMModel()
         self.clf_svm = model_svm.clf.fit(df_train["feature"], df_train.target)
 
-        # Logit model
+        # Logit models
 
         model_logit = LogitModel()
         self.clf_logit = model_logit.clf.fit(df_train["feature"], df_train.target)
 
-        # Logit model
+        # Logit models
 
         model_logit = LogitModel()
         self.clf_logit = model_logit.clf.fit(df_train["feature"], df_train.target)
@@ -97,9 +97,9 @@ class TextClassification(object):
 
             print("Naive Bayes Result: ")
             print(predicted_nb)
-            print("SVM model result: ")
+            print("SVM models result: ")
             print(predicted_svm)
-            print("Logit model result: ")
+            print("Logit models result: ")
             print(predicted_logit)
             print("Grid Search Naive Bayes Result: ")
             print(predicted_gs_nb)
