@@ -51,21 +51,21 @@ class TextClassification(object):
         print(self.X_train.shape, self.y_train.shape)
         print(self.X_test.shape, self.y_test.shape)
         
-        # NB models
+        # NB model
         start = time.time()
         model_nb = NaiveBayesModel()
         self.clf_nb = model_nb.clf.fit(self.X_train["feature"], self.y_train)
         score_nb = self.clf_nb.score(self.X_test["feature"], self.y_test)
         elapsed_nb = (time.time() - start)
 
-        # SVM models
+        # SVM model
         start = time.time()
         model_svm = SVMModel()
         self.clf_svm = model_svm.clf.fit(self.X_train["feature"], self.y_train)
         score_svm = self.clf_svm.score(self.X_test["feature"], self.y_test)
         elapsed_svm = (time.time() - start)
 
-        # Logit models
+        # Logit model
         start = time.time()
         model_logit = LogitModel()
         self.clf_logit = model_logit.clf.fit(self.X_train["feature"], self.y_train)
@@ -187,13 +187,13 @@ class TextClassification(object):
 
             print("Naive Bayes Result: ")
             print(predicted_nb)
-            print("SVM models result: ")
+            print("SVM model result: ")
             print(predicted_svm)
-            print("NBSVM models result: ")
+            print("NBSVM model result: ")
             print(predicted_nbsvm)
-            print("Logit models result: ")
+            print("Logit model result: ")
             print(predicted_logit)
-            print("KNN models result: ")
+            print("KNN model result: ")
             print(predicted_knn)
             print("Decision Tree Result: ")
             print(predicted_decision_tree)
