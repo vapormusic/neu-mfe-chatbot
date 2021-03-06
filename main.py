@@ -3,12 +3,14 @@ from pyvi import ViTokenizer, ViPosTagger
 
 from model.knn_model import KNNModel
 from model.naive_bayes_model import NaiveBayesModel
+from model.nbsvm_model import NBSVMModel
 from model.svm_model import SVMModel
 from model.logit_model import LogitModel
 from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 from sklearn.model_selection import train_test_split
+
 import time
 
 
@@ -19,6 +21,7 @@ class TextClassification(object):
         self.gs_clf_logit = None
         self.gs_clf_svm = None
         self.clf_knn = None
+        self.clf_nbsvm = None
         self.clf_nb = None
         self.clf_svm = None
         self.clf_logit = None
@@ -70,6 +73,13 @@ class TextClassification(object):
         score_knn = self.clf_knn.score(self.X_test["feature"], self.y_test)
         elapsed_knn = (time.time() - start)
 
+        #NBSVM
+        start = time.time()
+        nbsvm = NBSVMModel()
+        self.clf_nbsvm = nbsvm.clf.fit(self.X_train["feature"], self.y_train)
+        score_nbsvm = self.clf_nbsvm.score(self.X_test["feature"], self.y_test)
+        elapsed_nbsvm = (time.time() - start)
+
         # Grid search NB and SVM
 
         parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
@@ -79,12 +89,11 @@ class TextClassification(object):
 
         parameters_svm = {'vect__ngram_range': [(1, 1), (1, 2)],
                           'tfidf__use_idf': (True, False),
-                          'clf-svm__alpha': (1e-2, 1e-3),
+                          'clf-svm__alpha': (1e-3, 1e-2, 1e-1),
                       }
 
         parameters_logit = {'vect__ngram_range': [(1, 1), (1, 2)],
                           'tfidf__use_idf': (True, False)
-
                       }
 
         cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=10, random_state=1)
@@ -112,6 +121,7 @@ class TextClassification(object):
         print("finish time:")
         print("NB: " + str(round(elapsed_nb, 4))+"s")
         print("SVM: " + str(round(elapsed_svm, 4))+"s")
+        print("NBSVM: " + str(round(elapsed_nbsvm, 4)) + "s")
         print("Logit: " + str(round(elapsed_logit, 4))+"s")
         print("KNN: " + str(round(elapsed_knn, 4)) + "s")
         print("GS_NB: " + str(round(elapsed_gs_nb, 4))+"s")
@@ -121,6 +131,7 @@ class TextClassification(object):
         print("accuracy: ")
         print("NB: " + str(score_nb))
         print("SVM: " + str(score_svm))
+        print("NBSVM: " + str(score_nbsvm))
         print("Logit: " + str(score_logit))
         print("KNN: " + str(score_knn))
         print("GS_NB: " + str(score_gs))
@@ -138,6 +149,7 @@ class TextClassification(object):
             predicted_svm = self.clf_svm.predict(df_test["feature"])
             predicted_logit = self.clf_logit.predict(df_test["feature"])
             predicted_knn = self.clf_knn.predict(df_test["feature"])
+            predicted_nbsvm = self.clf_nbsvm.predict(df_test["feature"])
             predicted_gs_svm = self.gs_clf_svm.predict(df_test["feature"])
             predicted_gs_nb = self.gs_clf.predict(df_test["feature"])
             predicted_gs_logit = self.gs_clf_logit.predict(df_test["feature"])
@@ -147,6 +159,8 @@ class TextClassification(object):
             print(predicted_nb)
             print("SVM model result: ")
             print(predicted_svm)
+            print("NBSVM model result: ")
+            print(predicted_nbsvm)
             print("Logit model result: ")
             print(predicted_logit)
             print("KNN model result: ")

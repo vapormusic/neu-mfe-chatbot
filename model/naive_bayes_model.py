@@ -14,7 +14,7 @@ class NaiveBayesModel(object):
     def _init_pipeline():
         pipe_line = Pipeline([
             ("transformer", FeatureTransformer()),#sử dụng pyvi tiến hành word segmentation
-            ("vect", CountVectorizer(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines())),#bag-of-words
+            ("vect", CountVectorizer(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").read().splitlines())),#bag-of-words
             ("tfidf", TfidfTransformer()),#tf-idf
             ("clf", MultinomialNB())#model naive bayes
         ])

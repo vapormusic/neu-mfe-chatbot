@@ -13,7 +13,7 @@ class KNNModel(object):
     def _init_pipeline():
         pipe_line = Pipeline([
             ("transformer", FeatureTransformer()),
-            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()))),
+            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").read().splitlines()))),
             ("tfidf", TfidfTransformer()),
             ("clf", KNeighborsClassifier(n_neighbors=4))
         ])

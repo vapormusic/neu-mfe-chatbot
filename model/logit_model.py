@@ -13,7 +13,7 @@ class LogitModel(object):
     def _init_pipeline():
         pipe_line = Pipeline([
             ("transformer", FeatureTransformer()),
-            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").readlines()))),
+            ("vect", CountVectorizer(stop_words= frozenset(open('filtration/vietnamese-stopwords-dash.txt', encoding="utf8").read().splitlines()))),
             ("tfidf", TfidfTransformer()),
             ("clf", LogisticRegression(solver='lbfgs', multi_class='auto', max_iter=10000))
         ])
