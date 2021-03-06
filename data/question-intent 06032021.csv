@@ -1,0 +1,390 @@
+feature,target
+ trường hiện tại có nhận sinh viên mới không ạ,Các hình thức xét tuyển vào khoa
+ chương trình [dseb](nganh_hoc) có những hình thức xét tuyển nào,Các hình thức xét tuyển vào khoa
+ khoa mình có những hình thức tuyển sinh nào,Các hình thức xét tuyển vào khoa
+ hình thức tuyển sinh,Các hình thức xét tuyển vào khoa
+ xét tuyển,Các hình thức xét tuyển vào khoa
+ em muốn vào học tại khoa thì có cách nào không,Các hình thức xét tuyển vào khoa
+ bộ môn [dseb](nganh_hoc) có những cách tuyển sinh nào,Các hình thức xét tuyển vào khoa
+ làm cách nào để vào được các chương trình [data science](nganh_hoc),Các hình thức xét tuyển vào khoa
+ chuyên ngành [actuary](nganh_hoc) của khoa truyển sinh bằng cách nào,Các hình thức xét tuyển vào khoa
+ khoa tuyển sinh chương trình [tkt](nganh_hoc) bằng các hình thức nào,Các hình thức xét tuyển vào khoa
+ có thể chuyển từ chương trình khác trong trường ktqd sang chương trình [quản trị rủi ro](nganh_hoc) của khoa toán không,Các hình thức xét tuyển vào khoa
+ các chương trình văn bằng 2 của khoa,Xét tuyển Văn bằng 2
+ em hiện đang học ngành trong trường thì có được học thêm văn bằng 2 khoa mình không ạ,Xét tuyển Văn bằng 2
+ khoa có mở chương trình văn bằng 2 không ạ,Xét tuyển Văn bằng 2
+ em có thể đăng kí học thêm 1 văn bằng trong khoa không ạ,Xét tuyển Văn bằng 2
+ văn bằng 2,Xét tuyển Văn bằng 2
+" em có thể theo học chuyên ngành khác tại đh ktqd, sau đó học bằng 2 [actuary](nganh_hoc) được không",Xét tuyển Văn bằng 2
+ chuyên ngành [ds](nganh_hoc) có cho phép sinh viên học văn bằng 2 không vậy,Xét tuyển Văn bằng 2
+ chuyên ngành [dseb](nganh_hoc) có cho phép sinh viên học văn bằng 2 không ạ,Xét tuyển Văn bằng 2
+ chương trình [toán kt](nganh_hoc) có tuyển sinh sinh viên học văn bằng 2 không ạ,Xét tuyển Văn bằng 2
+ chương trình [định phí bảo hỉểm](nganh_hoc) có tuyển sinh sinh viên văn bằng 2 không ạ,Xét tuyển Văn bằng 2
+ học phí,Học phí / kỳ sinh viên __
+ học phí mỗi một kỳ của chuyên ngành [toán kt](nganh_hoc) là bao nhiêu,Học phí / kỳ sinh viên __
+ học phí của chuyên ngành [data science](nganh_hoc) là bao nhiêu mỗi kỳ,Học phí / kỳ sinh viên __
+ học phí chuyên ngành [dseb](nganh_hoc) được tính như thế nào ạ,Học phí / kỳ sinh viên __
+ học phí chuyên ngành [tkt](nganh_hoc) bao nhiêu/kỳ ạ,Học phí / kỳ sinh viên __
+ học phí chuyên ngành [tkt](nganh_hoc) có tăng theo cấp số nhân không ạ,Học phí / kỳ sinh viên __
+ mức học phí khi theo học chương trình [tkt](nganh_hoc) là bao nhiêu,Học phí / kỳ sinh viên __
+ mỗi kỳ chuyên ngành [toán kinh tế](nganh_hoc) phải đóng bao nhiêu tiền vậy,Học phí / kỳ sinh viên __
+ học phí [toán kinh tế](nganh_hoc) có đắt không ạ,Học phí / kỳ sinh viên __
+ lương,Lương sinh viên tốt nghiệp__
+ sinh viên [toán kt](nganh_hoc) có giàu không,Lương sinh viên tốt nghiệp__
+ sau này sinh viên ngành [toán kt](nganh_hoc) có kiếm được nhiều tiền không,Lương sinh viên tốt nghiệp__
+ học [toán kt](nganh_hoc) xong lương có cao ko ạ,Lương sinh viên tốt nghiệp__
+ lương sau khi học [ds](nganh_hoc) xong có cao ko ạ,Lương sinh viên tốt nghiệp__
+ thu nhập sau khi ra trường của một sinh viên [tkt](nganh_hoc) là bao nhiêu,Lương sinh viên tốt nghiệp__
+ lương sinh viên [toán kt](nganh_hoc) sau khi ra trường có đủ ăn không,Lương sinh viên tốt nghiệp__
+ sinh viên tốt nghiệp [actuary](nganh_hoc) có lương khởi điểm là bao nhiêu,Lương sinh viên tốt nghiệp__
+ học chuyên ngành [đpbhqtrr](nganh_hoc) sau này lương có cao ko,Lương sinh viên tốt nghiệp__
+ lương sinh viên tốt nghiệp chuyên ngànhh [ds](nganh_hoc) là bao nhiêu,Lương sinh viên tốt nghiệp__
+ mức lương khởi điểm cho 1 fresher chuyên ngành [định phí bảo hỉểm](nganh_hoc) là bao nhiêu ạ,Lương sinh viên tốt nghiệp__
+ nơi làm việc,Nơi làm việc của sinh viên tốt nghiệp __
+ nơi làm việc của sinh viên [toán kinh tế](nganh_hoc),Nơi làm việc của sinh viên tốt nghiệp __
+ sinh viên [toán kinh tế](nganh_hoc) đi làm ở đâu,Nơi làm việc của sinh viên tốt nghiệp __
+ những cơ quan nào nhận học sinh ngành [toán kinh tế](nganh_hoc),Nơi làm việc của sinh viên tốt nghiệp __
+ sinh viên [toán kinh tế](nganh_hoc) sau khi ra trường có thể làm ở đâu,Nơi làm việc của sinh viên tốt nghiệp __
+ sinh viên [toán kinh tế](nganh_hoc) có thể làm ở những nơi nào sau khi ra trường,Nơi làm việc của sinh viên tốt nghiệp __
+ sinh viên [định phí bảo hỉểm](nganh_hoc) làm ở đâu sau khi ra trường,Nơi làm việc của sinh viên tốt nghiệp __
+ những nơi mà sinh viên tốt nghiệp chuyên ngành [đpbhqtrr](nganh_hoc) có thể làm sau khi ra trường là gì,Nơi làm việc của sinh viên tốt nghiệp __
+" sinh viên tốt nghiệp chuyên ngành [ds](nganh_hoc) có thể làm ở nhưng công ty, cơ quan nào nào",Nơi làm việc của sinh viên tốt nghiệp __
+ những công ty mà [toán kinh tế](nganh_hoc) có thể làm sau khi ra trường là gì,Nơi làm việc của sinh viên tốt nghiệp __
+ ra trường em có thể làm ở những vị trí nào ạ,Nơi làm việc của sinh viên tốt nghiệp __
+ em có thể thực tập ở những đâu sau khi ra trường,Nơi làm việc của sinh viên tốt nghiệp __
+ sau này sinh viên [toán kinh tế](nganh_hoc) làm việc ở đâu,Nơi làm việc của sinh viên tốt nghiệp __
+ công việc sau khi ra trường,Công việc sau khi ra trường
+ các việc làm sau khi ra trường cúa sinh viên ngành [ds](nganh_hoc),Công việc sau khi ra trường
+ sinh viên học ngành [ds](nganh_hoc) thì sẽ sẽ làm gì sau khi ra trường,Công việc sau khi ra trường
+" sau khi ra trường, sinh viên [ds](nganh_hoc) sẽ làm để sống",Công việc sau khi ra trường
+ học xong chương trình [ds](nganh_hoc) có cơ hội làm việc gì,Công việc sau khi ra trường
+ học ngành [toán kinh tế](nganh_hoc) ra trường làm gì,Công việc sau khi ra trường
+ học ngành [data science](nganh_hoc) ra trường làm nghề gù,Công việc sau khi ra trường
+ học ngành [dseb](nganh_hoc) thì phù hợp với ngành nghề gì,Công việc sau khi ra trường
+ nghề gì phù hợp với người học ngành [định phí bảo hỉểm](nganh_hoc),Công việc sau khi ra trường
+ các vị trí nghề nghiệp sau này của ngành [data science](nganh_hoc) là gì ạ,Công việc sau khi ra trường
+Em muốn biết là học ngành __ ra có dễ xin việc không ạ?,Cơ hội việc
+Học ngành __ xong có dễ xin việc ko?,Cơ hội việc
+Nhu cầu sinh viên học ngành __ có cao không?,Cơ hội việc
+Sau khi học xong ngành __ có dễ kiếm được việc làm không?,Cơ hội việc
+Cơ hội nghề nghiệp của ngành __ này như thế nào ạ?,Cơ hội việc
+Học xong ngành __ có dễ kiếm được việc không?,Cơ hội việc
+Học xong ngành __ có dễ xin việc không?,Cơ hội việc
+cơ hội làm việc của ngành __ sau này là như thế nào ạ?,Cơ hội việc
+ khoa có nhiều thầy không,Số lượng các thầy cô
+ ở trong khoa có nhiều cô không,Số lượng các thầy cô
+ ở khoa có ít thầy cô không,Số lượng các thầy cô
+ ở khoa toán kinh tế có nhiều thầy cô không nhỉ,Số lượng các thầy cô
+ danh sách các thầy cô,Số lượng các thầy cô
+ số lượng thầy cô trong khoa,Số lượng các thầy cô
+ trong khoa có bao nhiêu thầy cô,Số lượng các thầy cô
+ tính cách của các thầy cô,Cảm nhận về thầy cô
+ thầy cô có dễ quí không,Cảm nhận về thầy cô
+ cảm nhận về thầy cô,Cảm nhận về thầy cô
+ thầy cô có hiền không,Cảm nhận về thầy cô
+ thầy cô khoa mình như thế nào,Cảm nhận về thầy cô
+ thầy cô trong khoa có nhiệt tình không,Cảm nhận về thầy cô
+ anh chị nhận xét thế nào về giáo viên trong khoa,Cảm nhận về thầy cô
+ bạn nhận xét sao về thầy cô trong khoa,Cảm nhận về thầy cô
+ các thầy cô có ghe lắm ko,Cảm nhận về thầy cô
+ môi trường học tập khác gì các cấp dưới,Thầy cô đại học khác gì cấp 3
+ thầy cô khác gì cấp 3 không,Thầy cô đại học khác gì cấp 3
+ cách giảng dạy của thầy cô có khác gì cấp 3,Thầy cô đại học khác gì cấp 3
+ giáo viên cấp thpt có gì khác so với giào viên đại học,Thầy cô đại học khác gì cấp 3
+ thầy cô trong khoa có giống như cấp 3 không,Thầy cô đại học khác gì cấp 3
+ giáo viên đại học có giống như cấp 3 không,Thầy cô đại học khác gì cấp 3
+ em thi môn [văn](mon) thì có thể học tại khoa không ạ,Loại tổ hợp xét tuyển
+" em học theo tổ hợp [toán](mon), [hóa](mon) , [sinh](mon) thì có thể thi vào khoa không ạ",Loại tổ hợp xét tuyển
+ em thi khối a01 thì có thể học tại khoa không ạ,Loại tổ hợp xét tuyển
+ tổ hợp xét tuyển,Loại tổ hợp xét tuyển
+ em cần điểm những bộ môn gì ạ,Loại tổ hợp xét tuyển
+ những tổ hợp môn được chấp nhận để xét tuyển vào khoa,Loại tổ hợp xét tuyển
+ chương trình [toán kinh tế](nganh_hoc) tuyển sinh những tổ hợp nào,Loại tổ hợp xét tuyển
+ tổ hợp nào thì có thể dùng để xét tuyển chương trình [toán kinh tế](nganh_hoc),Loại tổ hợp xét tuyển
+ thí sình có thể dùng tổ hợp nào để xét tuyển vào chương trình [toán kinh tế](nganh_hoc),Loại tổ hợp xét tuyển
+ những tổ hợp có thể dùng để xét tuyển vào chương trình [toán kt](nganh_hoc) là gì,Loại tổ hợp xét tuyển
+ các tổ hợp xã hội có được dùng để xét tuyển vào chương trình [dseb](nganh_hoc) không,Loại tổ hợp xét tuyển
+ có những tổ hợp nào dùng để xét tuyển vào chương trình [định phí bảo hỉểm](nganh_hoc),Loại tổ hợp xét tuyển
+ [7.8](diem) có đỗ được khoa toán không,Điểm xét tuyển đầu vào
+ cần bao nhiêu điểm thì có thể vào được chương trình [actuary](nganh_hoc),Điểm xét tuyển đầu vào
+ bao nhiêu điểm thì đỗ chương trình [data science](nganh_hoc),Điểm xét tuyển đầu vào
+ điểm đậu chương trình [toán kinh tế](nganh_hoc) là bao nhiêu,Điểm xét tuyển đầu vào
+ bao nhiêu điểm thì đậu chương trình [ds](nganh_hoc),Điểm xét tuyển đầu vào
+ cần bao nhiêu để đỗ chương trình [ds](nganh_hoc),Điểm xét tuyển đầu vào
+ cần bao nhiêu điểm để đỗ chuyên ngành [ds](nganh_hoc),Điểm xét tuyển đầu vào
+ điểm đậu vào chương trình [toán kinh tế](nganh_hoc) có cao không,Điểm xét tuyển đầu vào
+ điểm xét tuyển vào chương trình [actuary](nganh_hoc) là bao nhiêu,Điểm xét tuyển đầu vào
+ điểm đỗ vào [ds](nganh_hoc) là bao nhiêu,Điểm xét tuyển đầu vào
+ cách tuyển thẳng vào khoa,Áp dụng chung
+ các hình thức tuyển thẳng vào khoa,Áp dụng chung
+ khoa có áp dụng các hình thức tuyển thẳng không,Áp dụng chung
+ khoa có tuyển thẳng không ạ,Áp dụng chung
+ giải,Giải quốc gia
+ giải bộ môn [toán] thì có được tuyển thẳng không ạ,Giải quốc gia
+ giải cấp [thành phố] thì có được tuyển thẳng không ạ,Giải quốc gia
+ giải gi thì khoa mới nhận ạ,Giải quốc gia
+ em có giải quốc gia môn [toán](mon) em có được tuyển thẳng vào khoa không,Giải quốc gia
+ em có giải [ba](giai_thuong) quốc gia môn [hóa](mon) em có được tuyển thẳng không ạ,Giải quốc gia
+ giải [ba](giai_thuong) quốc gia môn [lý](mon) có được tuyển thẳng không ạ,Giải quốc gia
+ em có giải quốc tế môn [toán](mon) em có được tuyển thẳng vào khoa không,Giải quốc gia
+ em có huy chương [bạc](giai_thuong) quốc tế môn [hóa](mon) em có được tuyển thẳng không ạ,Giải quốc gia
+ giải [ba](giai_thuong) quốc tế môn [lý](mon) có được tuyển thẳng không ạ,Giải quốc gia
+ sat,SAT
+ số điểm sat tiêu chuẩn để vào trường là gì ạ,SAT
+ em có thể apply vào trường bằng điểm sat không ạ,SAT
+ điểm sat,SAT
+ điểm sat [1200](diem) có đủ để xét tuyển kết hợp không ạ,SAT
+" em có sat [1340](diem) điểm, môn [toán](mon) được [8.0](diem) điểm, môn [hóa](mon) được [9.0](diem) điểm có được vào khoa không ạ",SAT
+ ngoài điểm sat ra còn điều kiện nào để được xét tuyển vào khoa ạ,SAT
+ điểm sat trên bao nhiêu thì được xét tuyển ạ,SAT
+ chỉ cần điểm ielts là được tuyển thẳng rồi ạ,Ielts
+ em có điểm ielts là [7.5](diem_ielts) em có được đăng ký xét tuyển kết hợp không ạ,Ielts
+ ielts [6.0](diem_ielts) đã đủ để xét tuyển vào khoa chưa ạ,Ielts
+ ielts bao nhiêu là đủ để vào khoa ạ,Ielts
+ em có ielts [5.5](diem_ielts) rồi có được tuyển thẳng không ạ,Ielts
+" em có ielts [8.5](diem_ielts), 2 môn [8.2 toán](diem) và [7.6 lý](diem) em được tổng là [toán kinh tế](nganh_hoc) điểm, em có được tuyển thẳng không ạ",Ielts
+ chỉ cần điểm ielts là được tuyển thẳng rồi ạ,Olympia
+ em có điểm ielts là [7.5](diem_ielts) em có được đăng ký xét tuyển kết hợp không ạ,Olympia
+ ielts [6.0](diem_ielts) đã đủ để xét tuyển vào khoa chưa ạ,Olympia
+ ielts bao nhiêu là đủ để vào khoa ạ,Olympia
+ em có ielts [5.5](diem_ielts) rồi có được tuyển thẳng không ạ,Olympia
+" em có ielts [8.5](diem_ielts), 2 môn [8.2 toán](diem) và [7.6 lý](diem) em được tổng là [toán kinh tế](nganh_hoc) điểm, em có được tuyển thẳng không ạ",Olympia
+ diện nghèo,Diện nghèo
+ nhà em có hoàn cảnh khó khăn thì được tuyển thẳng không ạ,Diện nghèo
+" em thuộc diện nghèo theo nghị quyết 30a, em có được tuyển thẳng không ạ",Diện nghèo
+ hộ nghèo có được ưu tiên vào trường không ạ,Diện nghèo
+ khoa gồm những chuyên ngành nào,Các chương trình / chuyên ngành của khoa
+ các chương trình chuyên ngành của khoa,Các chương trình / chuyên ngành của khoa
+ khoa có những chương trình nào,Các chương trình / chuyên ngành của khoa
+ khoa có những chuyên ngành nào,Các chương trình / chuyên ngành của khoa
+ khoa đào tạo những chuyên ngành nào,Các chương trình / chuyên ngành của khoa
+ cơ hội đi du học liên thông,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ các chương trình liên kết với nước ngoài,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ các lớp liên kết của khoa,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ em có thể học liên kết được không ạ,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ lyon,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ khoa có chương trình liên kết không,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ khoa có những chương trình liên kết nước ngoài không,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ em có cơ hội học chương trình liên kết nước ngoài không,Các chương trình / chuyên ngành của khoa liên kết với nước ngoài
+ các loại học bổng,Các loại học bổng
+ em có thể kiếm học bổng khi học ở khoa không,Các loại học bổng
+ khoa áp dụng những loại học bổng gì,Các loại học bổng
+ khoa có những học bổng nào,Các loại học bổng
+ một năm có bao nhiêu loại học bổng,Các loại học bổng
+ khoa có những cơ hội học bổng nào dành cho sinh viên,Các loại học bổng
+ học bổng của trường và của doanh nghiệp khác nhau như thế nào,Các loại học bổng
+ em có điểm tổng kết học kì [một] là [7.9] thì có được học bổng không ạ,Điều kiện học bổng
+ học lực [giỏi] thì có đủ để đạt học bổng không ạ,Điều kiện học bổng
+ điều kiện học bổng,Điều kiện học bổng
+ kiếm học bổng có dễ không ạ,Điều kiện học bổng
+ khoa có những mức học bổng nào,Điều kiện học bổng
+ điều kiện nào để đạt học bổng,Điều kiện học bổng
+ em cần đạt điểm trung bình bao nhiêu thì được học bổng,Điều kiện học bổng
+ tiêu chí xét học bổng của khoa,Điều kiện học bổng
+ có khó khăn lắm không để kiếm học bổng ạ,Điều kiện học bổng
+ em muốn tham gia hoạt đọng ngoại khóa trong khoa,Các cuộc thi của khoa
+ ngoài [mfecup] thì khoa còn tổ chức nhũng cuôc thi gì khác,Các cuộc thi của khoa
+ ngoài học ra thì ở khoa em còn có thể tham gia những hoạt động gì,Các cuộc thi của khoa
+ các hoạt động ngoại khóa của khoa,Các cuộc thi của khoa
+ các cuộc thi của khoa,Các cuộc thi của khoa
+ khoa có những cuộc thi nào,Các cuộc thi của khoa
+ trong năm khoa có tổ chức cuộc thi nào không,Các cuộc thi của khoa
+ sinh viên trong khoa có thể tham gia các cuộc thi nào,Các cuộc thi của khoa
+ em có thể tham gia vào các hoạt động ngoại khóa của khoa không,Cơ hội khen thưởng trong các cuộc thi
+ cơ hội khen thưởng trong các cuộc thi,Cơ hội khen thưởng trong các cuộc thi
+ sinh viên đạt thành tích trong các cuộc thi có được khen thưởng không,Cơ hội khen thưởng trong các cuộc thi
+ tham gia các hoạt động nào thì được khen thưởng,Cơ hội khen thưởng trong các cuộc thi
+" em học không giỏi, liệu em có cơ hội phấn đấu để được khen thưởng không",Cơ hội khen thưởng trong các cuộc thi
+ thi viết cảm nhận về khoa mình,Thi viết khoa toán trong tôi
+ mfeinmymind,Thi viết khoa toán trong tôi
+ khoa toán trong tôi là gì,Thi viết khoa toán trong tôi
+ khoa mình có tổ chức cuộc thi viết lách gì không ạ,Thi viết khoa toán trong tôi
+ cuộc thi viết khoa toán trong tôi là gì ạ,Thi viết khoa toán trong tôi
+ thể lệ cuộc thi viết khoa toán trong tôi là gì ạ,Thi viết khoa toán trong tôi
+ quyền lợi khi tham dự cuộc thi viết khoa toán trong tôi là gì ạ,Thi viết khoa toán trong tôi
+ ngoài [bóng đá] ra thì khoa có các hoạt đông thể thao nào khác ạ,Thể dục thể thao
+ khoa mình có giải thể thao nào ạ,Thể dục thể thao
+ khoa mình có tổ chức các hoạt động thể thao gì không ạ,Thể dục thể thao
+ khoa có những cuộc thi thể dục thể thao nào ạ,Thể dục thể thao
+ các cuộc thi thể dục thể thao có tổ chức thường xuyên không,Thể dục thể thao
+ đá bóng,Thi bóng đá
+ em muốn đá bóng với các bạn trong khoa,Thi bóng đá
+ thi bóng đá trong khoa,Thi bóng đá
+ mfecup được tổ chức như thế nào,Thi bóng đá
+ khoa có câu lạc bộ bóng đá không ạ em muốn đăng ký tham gia để dự thi ạ,Thi bóng đá
+ khoa có giải bóng đá không ạ,Thi bóng đá
+ mfecup là gì ạ,Thi bóng đá
+ điểm rèn luyện là gì ạ,điểm rèn luyện
+ thang điểm rèn luyện được tính như nào ạ,điểm rèn luyện
+ đánh giá điểm rèn luyện như thế nào ạ,điểm rèn luyện
+ điểm rèn luyện dùng để làm gì ạ,điểm rèn luyện
+ điểm rèn luyện bao nhiêu là đạt ạ,điểm rèn luyện
+ em phải làm gì để có điểm rèn luyện ạ,điểm rèn luyện
+ làm cách nào để tăng điểm rèn luyện ạ,điểm rèn luyện
+ tham gia những hoạt động nào được tính vào điểm rèn luyện ạ,điểm rèn luyện
+ nếu điểm rèn luyện mà không đạt thì sao ạ,điểm rèn luyện
+" đánh giá điểm rèn luyện theo kỳ học, năm học hay toàn khóa ạ",điểm rèn luyện
+ điểm rèn luyện có quan trọng không ạ,điểm rèn luyện
+ tầm quan trọng của điểm rèn luyện như nào ạ,điểm rèn luyện
+ điểm rèn luyện có ảnh hưởng đến việc xét bằng không ạ,điểm rèn luyện
+ đăng ký tín chỉ như thế nào ạ,Đăng ký tín chỉ
+ đăng ký tín chỉ ở đâu ạ,Đăng ký tín chỉ
+ nhà trường có đăng ký trước cho bọn em không hay bọn em phải tự đăng ký ạ,Đăng ký tín chỉ
+ lúc đăng ký mạng nhà trường có bị lag không ạ,Đăng ký tín chỉ
+ được đăng ký tối đa bao nhiêu tín/kỳ ạ,Đăng ký tín chỉ
+ phải đăng ký tối thiểu bao nhiêu tín/kỳ ạ,Đăng ký tín chỉ
+ số tín chỉ tối đa được đăng ký 1 kỳ là bao nhiêu ạ,Đăng ký tín chỉ
+ số tín chỉ tối thiểu được đăng ký 1 kỳ là bao nhiêu ạ,Đăng ký tín chỉ
+ ra quán net đăng ký có dễ hơn không ạ,Đăng ký tín chỉ
+ nếu em muốn hủy lớp đã đăng ký thì làm như nào ạ,Đăng ký tín chỉ
+ thời gian đăng ký tín chỉ trong bao lâu ạ,Đăng ký tín chỉ
+ em nên đăng ký bao nhiêu tín chỉ/kỳ ạ,Đăng ký tín chỉ
+ hủy tín chỉ như nào ạ,Đăng ký tín chỉ
+ em thích anh [Tu] khoa [Act](nganh_hoc),Kiểm người yêu khi vào khoa
+ chị [Linh] co xinh không ạ,Kiểm người yêu khi vào khoa
+ kiếm người iu,Kiểm người yêu khi vào khoa
+ học nhiều thế thì có thời gian để kiếm người yêu không,Kiểm người yêu khi vào khoa
+ kiếm người yêu,Kiểm người yêu khi vào khoa
+ kiếm bạn trai có dễ không ạ,Kiểm người yêu khi vào khoa
+ kiếm bạn gái có khó không ạ,Kiểm người yêu khi vào khoa
+ ở khoa có nhiều anh chị đẹp trai xinh gái không ạ,Kiểm người yêu khi vào khoa
+ trong lớp có nhiều bạn trai không ạ,Kiểm người yêu khi vào khoa
+ trong lớp có nhiều bạn trai đẹp trai không ạ,Kiểm người yêu khi vào khoa
+ trong lớp có nhiều bạn nữ không ạ,Kiểm người yêu khi vào khoa
+ trong lớp có nhiều bạn nữ xinh gái không ạ,Kiểm người yêu khi vào khoa
+ tỉ lệ nam nữ trong lớp như thế nào ạ,Kiểm người yêu khi vào khoa
+ làm thế nào để có người yêu ạ,Kiểm người yêu khi vào khoa
+ vào trường có dễ có người yêu không ạ,Kiểm người yêu khi vào khoa
+ đi chơi dã ngoại,"đi chơi, dã ngoại"
+ 1 năm khoa mình tổ chức đi dã ngoại bao nhiêu lần nhỉ,"đi chơi, dã ngoại"
+ sinh viên có nhiều thời gian rảnh không ạ,"đi chơi, dã ngoại"
+ lớp có thường xuyên đi chơi hay dã ngoại không ạ,"đi chơi, dã ngoại"
+" ngoài việc học, sinh viên có thể tham gia những hoạt động gì ạ","đi chơi, dã ngoại"
+ khoa/lớp có hay tổ chức các hoạt động dã ngoại không ạ,"đi chơi, dã ngoại"
+ em có thể kiếm thêm thông tin từ khoa qua các trang web nào,Trang khoa
+ trang web của khoa là gì ạ,Trang khoa
+ em có thể biết thêm thông tin của khoa từ đâu,Trang khoa
+ link website của khoa,Trang khoa
+ trang chính của khoa ở đâu ạ,Trang khoa
+ em có thể biết được gì thêm ở trang khoa,Chức năng chung của web
+ em có thể biết gì ở trang web,Chức năng chung của web
+ trong mfe.neu.edu.vn có những gì,Chức năng chung của web
+ các chức năng chính của web khoa,Chức năng chung của web
+ link tin tức của khoa,Tin tức web
+ tin tức web khoa,Tin tức web
+ khoa mình có thông báo gì mới,Tin tức web
+ thông tin mới nhất của khoa,Tin tức web
+ tin tức khoa,Tin tức web
+ những tin tức mới nhất của khoa,Tin tức web
+ khoa có những gì mới,Tin tức web
+ [ielts](english_cert) phải là bao nhiêu thì mới không phải thi đầu vào tiếng anh,Đối tượng phải thi
+ muỗn không thi phải đầu vào tiếng anh thì cần tối thiểu bao nhiêu [ielts](english_cert),Đối tượng phải thi
+ khi đỗ vào khoa rồi thi em còn phải thi gì nữa không,Đối tượng phải thi
+ em có được miễn tiếng anh đầu vào không,Đối tượng phải thi
+ thế nào để được miễn thi tiếng anh đầu vào,Đối tượng phải thi
+ điều kiện phải thi tiếng anh đầu vào,Đối tượng phải thi
+ em có phải thi đầu vào tiếng anh không,Đối tượng phải thi
+" em đã có đầu vào [ielts](english_cert) rồi, em có phải thi tiếng anh không",Đối tượng phải thi
+" em đã đi du học về, em có phải thi tiếng anh không",Đối tượng phải thi
+ các kĩ năng khi thi đầu vào tiếng anh của khoa,Dạng đề đầu vào tiếng anh
+ các phần thi đầu vào tiếng anh của khoa,Dạng đề đầu vào tiếng anh
+ tài liệu ôn thi đầu vào tiếng anh của khoa,Dạng đề đầu vào tiếng anh
+ thi đầu vào tiếng anh của khoa có những phần nào,Dạng đề đầu vào tiếng anh
+ hình thức thi đầu vào tiếng anh của khoa,Dạng đề đầu vào tiếng anh
+ format thi đầu vào tiếng anh của khoa,Dạng đề đầu vào tiếng anh
+ thi đầu vào tiếng anh như thế nào,Dạng đề đầu vào tiếng anh
+ dạng đề thi đầu vào tiếng anh,Dạng đề đầu vào tiếng anh
+ em phải đóng bao nhiêu để thi đầu vào tiếng anh ạ,Phí thi đầu vào Tiếng Anh
+ phí thi đầu vào tiếng anh,Phí thi đầu vào Tiếng Anh
+ có phải đóng phí thi đầu vào môn tiếng anh không ạ,Phí thi đầu vào Tiếng Anh
+ thi đầu vào tiếng anh miễn phí chứ ạ,Phí thi đầu vào Tiếng Anh
+ thi tiếng anh mất bao nhiêu tiền,Phí thi đầu vào Tiếng Anh
+ có mất phí thi đầu vào tiếng anh không,Phí thi đầu vào Tiếng Anh
+ kết quả thi đầu vào tiếng anh của em là [7.5](diem),Đánh giá điểm thi đầu vào Tiếng Anh
+ điểm đầu vào tiếng anh là [8](diem),Đánh giá điểm thi đầu vào Tiếng Anh
+ vị trí phòng thi đầu vào tiếng anh,Địa điểm thi đầu vào Tiếng Anh
+ thi đầu vào tiếng anh ở nhà nào,Địa điểm thi đầu vào Tiếng Anh
+ phòng thi đầu vào tiếng anh,Địa điểm thi đầu vào Tiếng Anh
+ thi đầu vào tiếng anh ở đâu,Địa điểm thi đầu vào Tiếng Anh
+ địa điểm thi tiếng anh,Địa điểm thi đầu vào Tiếng Anh
+ đổi điểm bài thi đầu vào tiếng anh,Đổi điểm đầu vào
+ kết quả thi đầu vào tiếng anh có thể đổi luôn làm điểm đầu ra không,Đổi điểm đầu vào
+ những điểm gì thì được đổi điểm đầu vào tiếng anh,Đổi điểm đầu vào
+ em có thể đổi điểm đầu vào tiếng anh không,Đổi điểm đầu vào
+ em có thể lấy điểm đầu vào tiếng anh lấy đầu ra luôn không,Đổi điểm đầu vào
+ khoa có chấp nhận đổi điểm đầu vào tiếng anh không,Đổi điểm đầu vào
+" tiếng anh của em chưa tốt, vậy có thể theo học chương trình được không",Yêu cầu tiếng Anh
+ tiếng anh ban đầu có quá quan trọng để học môn [toán kinh tế](nganh_hoc) không,Yêu cầu tiếng Anh
+ tiếng anh tối thiểu để học ngành [toán kinh tế](nganh_hoc) là gì ạ,Yêu cầu tiếng Anh
+ em muốn học ngành [toán kinh tế](nganh_hoc) nhưng tiếng anh em nát quá thì làm sao không ạ,Yêu cầu tiếng Anh
+ tiếng anh là bao nhiêu thì mới đủ để học môn [toán kinh tế](nganh_hoc),Yêu cầu tiếng Anh
+ yêu cầu đẩu ra tiếng anh là gì,Đầu ra Tiếng Anh
+ để ra trường thì cần những chứng chỉ tiếng anh gì,Đầu ra Tiếng Anh
+" em có [7.5](diem)[ielts](english_cert) , em đã đủ điểm tiếng anh ra trường chưa",Đầu ra Tiếng Anh
+ đầu ra tiếng anh là gì,Đầu ra Tiếng Anh
+ em cần bao nhiêu điểm [toelf](english_cert) để được ra trường,Đầu ra Tiếng Anh
+" em có [ielts](english_cert) , em đã đủ điểm tiếng anh ra trường chưa",Đầu ra Tiếng Anh
+ [7.5](diem) [toeic](english_cert) có đủ điều kiện tốt nghiệp về tiếng anh không,Đầu ra Tiếng Anh
+ có những chứng chỉ nào được công nhận đầu ra tiếng anh,Đầu ra Tiếng Anh
+ em có thể nộp những bằng nào để xét đầu ra tiếng anh,Đầu ra Tiếng Anh
+ chứng chỉ [ielts](english_cert) của em có được công nhận đầu ra không ạ,Đầu ra Tiếng Anh
+ em muốn tốt nghiệp thì phải có chứng chỉ tiếng anh nào ạ,Đầu ra Tiếng Anh
+ yêu cầu đẩu ra tin học là gì,Đầu ra Tin học
+ để ra trường thì cần những chứng chỉ tin học gì,Đầu ra Tin học
+" em có [mos](it_cert) , em đã đủ điểm tin học  ra trường chưa",Đầu ra Tin học
+ đầu ra tin học là gì,Đầu ra Tin học
+ em cần bao nhiêu điểm [ic3](it_cert) để được ra trường,Đầu ra Tin học
+" em có [mos](it_cert) , em đã đủ điểm tin học ra trường chưa",Đầu ra Tin học
+ [ic3](it_cert) có đủ điều kiện tốt nghiệp về tin học không,Đầu ra Tin học
+ có những chứng chỉ nào được công nhận đầu ra tin học,Đầu ra Tin học
+ em có thể nộp những bằng nào để xét đầu ra tin học,Đầu ra Tin học
+ chứng chỉ [mos](it_cert) của em có được công nhận đầu ra không ạ,Đầu ra Tin học
+ em muốn tốt nghiệp thì phải có chứng chỉ tin học nào ạ,Đầu ra Tin học
+Em thi thử được () điểm liệu có khả năng đỗ không,học lực của người hỏi
+Em học giỏi môn A liệu có đủ khả năng ngành B không,học lực của người hỏi
+Em thích/đam mê/yêu môn học A thì có thể thi vào ngành B không,học lực của người hỏi
+Điểm của em phải nằm trong top bao nhiêu cả nước để có khả năng đỗ,học lực của người hỏi
+Em học kém môn A liệu có thể học ngành B không,học lực của người hỏi
+Học lực của em như thế này vào học ngành A có vất vả không,học lực của người hỏi
+ học khoa có khó không,Nội dung học
+ nội dung chính của bộ môn [act](nganh_hoc),Nội dung học
+ ngành [act](nganh_hoc) có bao nhiêu tín chỉ,Nội dung học
+ các môn học chính của ngành [act](nganh_hoc),Nội dung học
+ môn [thống kê] của ngành [act](nganh_hoc)  có khó không,Nội dung học
+ ngành [ds](nganh_hoc) đào tạo những kĩ năng gì cho nghề nghiệp tương lai,Nội dung học
+ chương trình học có đáp ứng được với nhu cầu của nhà tuyển dụng hay không,Nội dung học
+ các môn học của ngành [dseb](nganh_hoc) có vất vả đối với con gái/con trai không,Nội dung học
+ môn học [giải tích 3] của ngành [ds](nganh_hoc) có tác dụng gì đối với nghề nghiệp sau này,Nội dung học
+ mình sẽ học những gì ở chuyên ngành [định phí bảo hiểm](nganh_hoc) vậy,Nội dung học
+ mình sẽ học những môn gì ở chuyên ngành [actuary](nganh_hoc),Nội dung học
+ triển vọng ngành học [actuary](nganh_hoc),Triển vọng ngành học
+ triển vọng nghề nghiệp trong [5] năm của ngành [actuary](nganh_hoc),Triển vọng ngành học
+ thị trường tuyển dụng ngành [actuary](nganh_hoc) như thế nào,Triển vọng ngành học
+ môi trường làm việc của ngành [actuary](nganh_hoc) như thế nào,Môi trường làm việc
+ môi trường làm việc thường năng động hay yên lặng,Môi trường làm việc
+ ngành [định phí bảo hỉểm](nganh_hoc) có cơ hội được tiếp xúc với nhiều người hay không,Môi trường làm việc
+ làm việc ngành [actuary](nganh_hoc) có cơ hội được nghiên cứu sâu hay không,Môi trường làm việc
+ ví dụ về nghiên cứu trong ngành [actuary](nganh_hoc),Môi trường làm việc
+ ví dụ về các môi trường làm việc của ngành [actuary](nganh_hoc),Môi trường làm việc
+ đồng nghiệp [actuary](nganh_hoc) có tốt và hòa đồng không,Môi trường làm việc
+ có thể thành công với [actuary](nganh_hoc) không,Cơ hội nghề nghiệp
+ cơ hội nghề nghiệp của [actuary](nganh_hoc),Cơ hội nghề nghiệp
+ lên chức trong ngành [actuary](nganh_hoc) có dễ không,Cơ hội nghề nghiệp
+ khả năng thăng tiến trong ngành [actuary](nganh_hoc) liệu có khó không,Cơ hội nghề nghiệp
+ ví dụ về những cựu học sinh đã thành công với ngành [toán kinh tế](nganh_hoc) là gì,Cơ hội nghề nghiệp
+ công việc ngành [tkt](nganh_hoc) có nặng nhọc quá không,Áp lực công việc
+ áp lực công việc [tkt](nganh_hoc),Áp lực công việc
+ công việc ngành [tkt](nganh_hoc) có vất vả không,Áp lực công việc
+ làm ngành [actuary](nganh_hoc) có mệt mỏi lắm không,Áp lực công việc
+ cường độ công việc [dseb](nganh_hoc),Áp lực công việc
+" ngành [actuary](nganh_hoc) có phải học tập suốt đời, liên tục học hỏi kiến thức mới không",Yêu cầu ngành__
+ ngành [actuary](nganh_hoc) có yêu cầu phải kiếm nhiều chứng chỉ không,Yêu cầu ngành__
+ yêu cầu riêng của ngành [actuary](nganh_hoc),Yêu cầu ngành__
+ các chứng chỉ nên có của ngành [actuary](nganh_hoc),Yêu cầu ngành__
+ môi trường làm việc của ngành [actuary](nganh_hoc) như thế nào,Môi trường làm việc
+ môi trường làm việc thường năng động hay yên lặng,Môi trường làm việc
+ ngành [định phí bảo hỉểm](nganh_hoc) có cơ hội được tiếp xúc với nhiều người hay không,Môi trường làm việc
+ làm việc ngành [actuary](nganh_hoc) có cơ hội được nghiên cứu sâu hay không,Môi trường làm việc
+ ví dụ về nghiên cứu trong ngành [actuary](nganh_hoc),Môi trường làm việc
+ ví dụ về các môi trường làm việc của ngành [actuary](nganh_hoc),Môi trường làm việc
+ đồng nghiệp [actuary](nganh_hoc) có tốt và hòa đồng không,Môi trường làm việc

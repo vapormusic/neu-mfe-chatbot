@@ -1,15 +1,19 @@
 import pandas as pd
 from pyvi import ViTokenizer, ViPosTagger
+from sklearn.ensemble import RandomForestRegressor
 
+from model.decision_tree_model import decision_tree
 from model.knn_model import KNNModel
 from model.naive_bayes_model import NaiveBayesModel
 from model.nbsvm_model import NBSVMModel
+from model.random_forest import randomforest
 from model.svm_model import SVMModel
 from model.logit_model import LogitModel
 from filtration.InputCleanup import InputCleanup
 import numpy as np
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
 
 import time
 
@@ -25,6 +29,9 @@ class TextClassification(object):
         self.clf_nb = None
         self.clf_svm = None
         self.clf_logit = None
+        self.clf_decision_tree = None
+        self.clf_random_forest = None
+        self.clf_logit = None
         self.X_train = None
         self.X_test = None
         self.y_train = None
@@ -35,7 +42,7 @@ class TextClassification(object):
         print("Initializating...")
         # Get data
         #url = 'https://raw.githubusercontent.com/vapormusic/neu-mfe-chatbot/main/question-intent.csv'
-        df1 = pd.read_csv('data/question-intent.csv')
+        df1 = pd.read_csv('data/question-intent 06032021.csv')
         pd.DataFrame(df1)
         df_orig = pd.DataFrame(df1)
 
@@ -79,6 +86,26 @@ class TextClassification(object):
         self.clf_nbsvm = nbsvm.clf.fit(self.X_train["feature"], self.y_train)
         score_nbsvm = self.clf_nbsvm.score(self.X_test["feature"], self.y_test)
         elapsed_nbsvm = (time.time() - start)
+
+        #Decision Tree
+        start = time.time()
+        decisiontree = decision_tree()
+        self.clf_decision_tree = decisiontree.clf.fit(self.X_train["feature"], self.y_train)
+        score_decision_tree = self.clf_decision_tree.score(self.X_test["feature"], self.y_test)
+        elapsed_decision_tree = (time.time() - start)
+
+        #Random Forest
+        start = time.time()
+        le = preprocessing.LabelEncoder()
+        X_train_vec = le.fit_transform(self.X_train["feature"].astype(str))
+        Y_train_vec = le.fit_transform(self.y_train)
+        X_test_vec = le.fit_transform(self.X_test["feature"].astype(str))
+        Y_test_vec = le.fit_transform(self.y_test)
+
+        random_forest = randomforest()
+        self.clf_random_forest = random_forest.clf.fit(X_train_vec[:, None], Y_train_vec)
+        score_random_forest = self.clf_random_forest.score(X_test_vec[:, None] , Y_test_vec)
+        elapsed_random_forest = (time.time() - start)
 
         # Grid search NB and SVM
 
@@ -124,6 +151,8 @@ class TextClassification(object):
         print("NBSVM: " + str(round(elapsed_nbsvm, 4)) + "s")
         print("Logit: " + str(round(elapsed_logit, 4))+"s")
         print("KNN: " + str(round(elapsed_knn, 4)) + "s")
+        print("Random Forest: " + str(round(elapsed_random_forest, 4)) + "s")
+        print("Decision Tree: " + str(round(elapsed_decision_tree, 4)) + "s")
         print("GS_NB: " + str(round(elapsed_gs_nb, 4))+"s")
         print("GS_SVM: " + str(round(elapsed_gs_svm, 4))+"s")
         print("GS_Logit: " + str(round(elapsed_gs_logit, 4))+"s")
@@ -134,6 +163,8 @@ class TextClassification(object):
         print("NBSVM: " + str(score_nbsvm))
         print("Logit: " + str(score_logit))
         print("KNN: " + str(score_knn))
+        print("Random Forest: " + str(score_random_forest))
+        print("Decision Tree: " + str(score_decision_tree))
         print("GS_NB: " + str(score_gs))
         print("GS_SVM: " + str(score_gs_svm))
         print("GS_Logit: " + str(score_gs_logit))

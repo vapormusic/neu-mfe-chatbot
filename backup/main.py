@@ -18,13 +18,15 @@ class TextClassification(object):
         self.clf_nb = None
         self.clf_svm = None
         self.clf_logit = None
+        self.clf_decision_tree = None
+        self.clf_random_forest = None
 
 
     def get_train_data(self):
         print("Initializating...")
         # Tạo train data
         #url = 'https://raw.githubusercontent.com/vapormusic/neu-mfe-chatbot/main/question-intent.csv'
-        df1 = pd.read_csv('../data/question-intent.csv')
+        df1 = pd.read_csv('../data/question-intent 06032021.csv')
         pd.DataFrame(df1)
 
         df_train = pd.DataFrame(df1)
@@ -38,6 +40,11 @@ class TextClassification(object):
 
         model_svm = SVMModel()
         self.clf_svm = model_svm.clf.fit(df_train["feature"], df_train.target)
+
+        # Logit model
+
+        model_logit = LogitModel()
+        self.clf_logit = model_logit.clf.fit(df_train["feature"], df_train.target)
 
         # Logit model
 
